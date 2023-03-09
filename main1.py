@@ -3,10 +3,10 @@ import random
 import sys
 #sys.setrecursionlimit(999999999)
 A1=[]
-
 with open('ZZ8_rosnace_20000.txt', 'r') as A1:
     for A1 in A1:
         exec(A1)
+##^^ odczyt pliku
 
 def insertion_sort(A):
     n = len(A)
@@ -96,6 +96,7 @@ def qsort(A,left, right):
 B=str(len(A1))
 size=len(A1)
 print("Długość:"+B)
+
 start_time = timeit.default_timer()
 insertion_sort(A1)
 end_time = timeit.default_timer()
