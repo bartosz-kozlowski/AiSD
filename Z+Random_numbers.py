@@ -5,6 +5,7 @@ def randomowe_liczby(n):
 n=10 #liczba elementow
 for i in range(1):
     A1 = randomowe_liczby(n)
+    #A1.sort(reverse=True)
     print(A1)
 #with open('Z10_random_40000.txt', 'w') as f:
     #for i in range(1):

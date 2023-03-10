@@ -1,13 +1,17 @@
 import timeit
 import random
-import sys
-#sys.setrecursionlimit(999999999)
 A1=[]
-with open('ZZ8_rosnace_20000.txt', 'r') as A1:
-    for A1 in A1:
-        exec(A1)
+#with open('Z10_random_40000.txt', 'r') as A1:
+    #for A1 in A1:
+        #exec(A1)
 ##^^ odczyt pliku
-
+def randomowe_liczby(n):
+    return [random.randint(1, 100000) for _ in range(n)]
+n=60000 #liczba elementow
+for i in range(1):
+    A1 = randomowe_liczby(n)
+    #A1.sort(reverse=True) #malejace_rosnace
+    #print(A1)
 def insertion_sort(A):
     n = len(A)
     for j in range(1, n):
@@ -95,6 +99,7 @@ def qsort(A,left, right):
 
 B=str(len(A1))
 size=len(A1)
+
 print("Długość:"+B)
 
 start_time = timeit.default_timer()
@@ -118,6 +123,6 @@ end_time = timeit.default_timer()
 print("Czas wykonania Heap Sort: {:.20f} sekund".format(end_time - start_time))
 
 start_time = timeit.default_timer()
-qsort(A1,0,len(A1)-1)
+#qsort(A1,0,len(A1)-1)
 end_time = timeit.default_timer()
-print("Czas wykonania Quick Sort: {:.20f} sekund".format(end_time - start_time))
+#print("Czas wykonania Quick Sort: {:.20f} sekund".format(end_time - start_time))
