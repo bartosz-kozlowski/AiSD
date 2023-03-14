@@ -27,6 +27,17 @@ def choose_pivot_middle(arr, start, end):
 def choose_pivot_random(arr, start, end):
     return random.randint(start, end)
 
+
+ciąg = []
+    punkt_szczytowy = długość // 2 # punkt w którym zaczyna się malejący fragment
+    wartość = 1 # wartość początkowa
+    for i in range(długość):
+        ciąg.append(wartość)
+        if i < punkt_szczytowy:
+            wartość += 1
+        else:
+            wartość -= 1
+
 arr = [3, 7, 1, 8, 4, 5, 2, 6]
 quicksort(arr, 0, len(arr)-1, choose_pivot_right)
 print(arr)

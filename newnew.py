@@ -1,5 +1,6 @@
 import timeit
 import random
+import copy
 A1=[]
 #with open('Z10_random_40000.txt', 'r') as A1:
     #for A1 in A1:
@@ -9,20 +10,24 @@ def randomowe_liczby(n):
     return [random.randint(1, 100000) for _ in range(n)]
 n=2000 #liczba elementow
 while n<=30000:
-    #A1 = randomowe_liczby(n)
+    A1 = randomowe_liczby(n)
+    B1 = copy.deepcopy(A1)
+    C1 = copy.deepcopy(A1)
+    D1 = copy.deepcopy(A1)
+    E1 = copy.deepcopy(A1)
     #A1.sort(reverse=True) #malejace_rosnace
     #A1=[1]*n
     #print(A1)
     ## V-KSZ
-    A1 = []
-    punkt_szczytowy = n // 2  # punkt w którym zaczyna się rosnący fragment
-    wartość = n  # wartość początkowa
-    for i in range(n):
-        A1.append(wartość)
-        if i < punkt_szczytowy:
-            wartość -= 1
-        else:
-            wartość += 1
+    #A1 = []
+    #punkt_szczytowy = n // 2  # punkt w którym zaczyna się rosnący fragment
+    #wartość = n  # wartość początkowa
+    #for i in range(n):
+        #A1.append(wartość)
+        #if i < punkt_szczytowy:
+            #wartość -= 1
+        #else:
+            #wartość += 1
     def insertion_sort(A):
         n = len(A)
         for j in range(1, n):
@@ -120,29 +125,28 @@ while n<=30000:
     size = len(A1)
 
     print("Długość:" + B)
-
     start_time = timeit.default_timer()
     insertion_sort(A1)
     end_time = timeit.default_timer()
     print("Czas wykonania Insertion Sort: {:.20f} sekund".format(end_time - start_time))
 
     start_time = timeit.default_timer()
-    selection_sort(A1)
+    selection_sort(B1)
     end_time = timeit.default_timer()
     print("Czas wykonania Selection Sort: {:.20f} sekund".format(end_time - start_time))
 
     start_time = timeit.default_timer()
-    sorted_arr = merge_sort(A1)
+    sorted_arr = merge_sort(C1)
     end_time = timeit.default_timer()
     print("Czas wykonania Merge Sort: {:.20f} sekund".format(end_time - start_time))
 
     start_time = timeit.default_timer()
-    heap_sort(A1)
+    heap_sort(D1)
     end_time = timeit.default_timer()
     print("Czas wykonania Heap Sort: {:.20f} sekund".format(end_time - start_time))
 
-    #start_time = timeit.default_timer()
-    # qsort(A1,0,len(A1)-1)
-    #end_time = timeit.default_timer()
-    # print("Czas wykonania Quick Sort: {:.20f} sekund".format(end_time - start_time))
+    start_time = timeit.default_timer()
+    qsort(A1,0,len(E1)-1)
+    end_time = timeit.default_timer()
+    print("Czas wykonania Quick Sort: {:.20f} sekund".format(end_time - start_time))
     n+=2000

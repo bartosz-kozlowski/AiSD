@@ -13,7 +13,6 @@ def shell_sort(arr):
             arr[j] = temp
         gap //= 2
     return arr
-
 arr = [5, 1, 4, 2, 8, 9]
 
 start_time = time.time()

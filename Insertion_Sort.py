@@ -9,9 +9,10 @@ def insertion_sort(A):
             A[i+1] = A[i]
             i = i - 1
         A[i+1] = key
+        print(A)
 #A1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-A1 = [2, 9, 4, 5, 8, 1, 3, 7, 1, 4, 6]
+A1 = [2,8,6,4,10]
 #A = [random.randint(1, 100000) for i in range(50000)]
 #A=[]
 #for i in range(1, 50000, 1):
