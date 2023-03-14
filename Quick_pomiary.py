@@ -22,7 +22,7 @@ while n <= 30000:
     print("Długość",n)
     for _ in range(3):
 
-        typ_danych == "losowe" ## AKSZ, losowe, VKSZ, stale, rosnace, malejace
+        typ_danych == "losowe" ### AKSZ, losowe, VKSZ, stale, rosnace, malejace
 
         qs= "NIE" ## czy same quick sorty?  #TAK #NIE
 
