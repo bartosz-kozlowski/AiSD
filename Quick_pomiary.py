@@ -4,6 +4,7 @@ import copy
 import numpy as np
 import sys
 sys.setrecursionlimit(999999999)
+X=[]
 A1=[]
 IS=[]
 SS=[]
@@ -12,19 +13,21 @@ MS=[]
 QS_R=[]
 QS_M=[]
 QS_S=[]
+typ_danych = "losowe"
+qs= "NIE"
 def randomowe_liczby(n):
     return [random.randint(1, 100000) for _ in range(n)]
 n=2000 #liczba elementow
-while n <= 2000:
+while n <= 30000:
     print("Długość",n)
     for _ in range(3):
 
-        typ_danych = "AKSZ" ## AKSZ, losowe, VKSZ, stale, rosnace, malejace
+        typ_danych == "losowe" ## AKSZ, losowe, VKSZ, stale, rosnace, malejace
 
-        qs= "TAK" ## czy same quick sorty?  #TAK #NIE
+        qs= "NIE" ## czy same quick sorty?  #TAK #NIE
+
 
         if typ_danych == "AKSZ":
-            X = []
             X = [0] * n
             for i in range(n):
                 X[i] = random.randint(0, 200000)
@@ -36,7 +39,6 @@ while n <= 2000:
             X = randomowe_liczby(n)
 
         if typ_danych == "VKSZ":
-            X = []
             X = [0] * n
             for i in range(n):
                 X[i] = random.randint(0, 200000)
@@ -45,7 +47,6 @@ while n <= 2000:
             X = half1 + half2
 
         if typ_danych == "stale":
-            X = []
             X = [1] * n
 
         if typ_danych == "rosnace":
@@ -264,7 +265,7 @@ while n <= 2000:
         średnia_QS_S = np.mean(QS_S)
         print("QS_skrajny", format(średnia_QS_S, '.20f'))
         QS_S = []
-    else:
+    if qs == "NIE":
         średnia_IS = np.mean(IS)
         print("IS", format(średnia_IS, '.20f'))
         IS = []
