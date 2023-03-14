@@ -13,19 +13,15 @@ MS=[]
 QS_R=[]
 QS_M=[]
 QS_S=[]
-typ_danych = "losowe"
-qs= "NIE"
+typ_danych = "losowe" ### AKSZ, losowe, VKSZ, stale, rosnace, malejace
+qs= "NIE" ## czy same quick sorty?  #TAK #NIE
 def randomowe_liczby(n):
     return [random.randint(1, 100000) for _ in range(n)]
 n=2000 #liczba elementow
+print(typ_danych)
 while n <= 30000:
     print("Długość",n)
     for _ in range(3):
-
-        typ_danych == "losowe" ### AKSZ, losowe, VKSZ, stale, rosnace, malejace
-
-        qs= "NIE" ## czy same quick sorty?  #TAK #NIE
-
 
         if typ_danych == "AKSZ":
             X = [0] * n
