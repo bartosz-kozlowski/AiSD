@@ -1,5 +1,3 @@
 # AiSD - Algorytmy i Struktury Danych
-Programy potrzebne do zrobienia sprawozdań PUT
-
-
-P0W3R
+Programy, które przydały mi się do zrobienia sprawozdań.
+PUT
